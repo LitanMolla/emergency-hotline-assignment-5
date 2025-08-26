@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emergency Hotline | Home</title>
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,13 +27,14 @@
                 <h4 class="text-[#006747] font-bold text-2xl">Emergency<br>Service</h4>
             </div>
             <div class="flex gap-5 items-center">
-                <button id="total_heart"
-                    class="flex items-center font-black gap-2.5 bg-[#41FF6B1A] py-3 px-9 rounded-[50px]"><span>0</span><img
-                        class="w-[30px]" src="./assets/heart.png" alt="Heart img"></button>
-                <button id="total_coin"
-                    class="flex items-center font-black gap-2.5 bg-[#41FF6B1A] py-3 px-9 rounded-[50px]"><span>100</span><img
+                <button class="flex items-center font-black gap-2.5 bg-[#41FF6B1A] py-3 px-9 rounded-[50px]"><span
+                        id="total_heart">0</span><img class="w-[30px]" src="./assets/heart.png"
+                        alt="Heart img"></button>
+                <button
+                    class="flex items-center font-black gap-2.5 bg-[#41FF6B1A] py-3 px-9 rounded-[50px]"><span id="total_coin">100</span><img
                         class="w-[30px]" src="./assets/coin.png" alt="coin img"></button>
-                <button class="bg-[#00A63E] py-3 px-9 rounded-[50px] text-white cursor-pointer"><span id="total_copy">2</span> Copy</button>
+                <button class="bg-[#00A63E] py-3 px-9 rounded-[50px] text-white cursor-pointer"><span
+                        id="total_copy">0</span> Copy</button>
             </div>
         </nav>
     </header>
@@ -49,15 +51,15 @@
         <div class="flex justify-between gap-[30px]">
             <!-- Left Side -->
             <div class="w-9/12">
-                <div class="card_container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px]">
+                <div id="card_container" class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[30px]">
                     <!-- Service Item 1 -->
                     <div class="service_item p-8 bg-white rounded-xl shadow-md shadow-gray-300">
                         <div class="flex justify-between items-center mb-4">
                             <div class="bg-[#FFE3E2] rounded-2xl w-15 h-15 flex justify-center items-center">
                                 <img class="w-8" src="./assets/emergency.png" alt="Emergency">
                             </div>
-                            <button id="heart_btn" class="cursor-pointer"><i
-                                    class="fa-regular fa-heart text-2xl"></i></button>
+                            <button class="cursor-pointer heart_btn"><i
+                                    class="fa-regular fa-heart heart_btn text-2xl pointer-events-none"></i></button>
                         </div>
                         <h3 id="service_title" class="text-2xl font-bold">National Emergency Number</h3>
                         <p id="service_subtitle" class="text-gray-500">National Emergency</p>
@@ -65,12 +67,12 @@
                         <p id="service_type" class="bg-[#F2F2F2] px-4 py-[6px] text-gray-600 inline-block rounded-full">
                             All</p>
                         <div class="flex items-center gap-2 mt-4">
-                            <button id="copy_btn"
-                                class="border border-[#D4D6D5] cursor-pointer w-1/2 rounded-lg py-2 duration-300 hover:bg-gray-200"><i
-                                    class="fa-regular fa-copy mr-2"></i><span>Copy</span></button>
-                            <button id="call_btn"
-                                class="bg-[#00A63E] text-white py-2 rounded-lg border border-[#00A63E] cursor-pointer w-1/2 duration-300 hover:bg-green-700"><i
-                                    class="fa-solid fa-phone mr-2"></i>Call</button>
+                            <button 
+                                class="border border-[#D4D6D5] cursor-pointer w-1/2 rounded-lg py-2 duration-300 hover:bg-gray-200 copy_btn"><i
+                                    class="fa-regular fa-copy mr-2 pointer-events-none"></i>Copy</button>
+                            <button 
+                                class="bg-[#00A63E] text-white py-2 rounded-lg border border-[#00A63E] cursor-pointer w-1/2 duration-300 hover:bg-green-700 call_btn"><i
+                                    class="fa-solid fa-phone mr-2 pointer-events-none "></i>Call</button>
                         </div>
                     </div>
                     <!-- Service Item 2 -->
@@ -79,8 +81,8 @@
                             <div class="bg-[#FFE3E2] rounded-2xl w-15 h-15 flex justify-center items-center">
                                 <img class="w-8" src="./assets/police.png" alt="Emergency">
                             </div>
-                            <button id="heart_btn" class="cursor-pointer"><i
-                                    class="fa-regular fa-heart text-2xl"></i></button>
+                            <button class="cursor-pointer heart_btn"><i
+                                    class="fa-regular fa-heart heart_btn text-2xl pointer-events-none"></i></button>
                         </div>
                         <h3 id="service_title" class="text-2xl font-bold">Police Helpline Number</h3>
                         <p id="service_subtitle" class="text-gray-500">Police</p>
@@ -88,12 +90,12 @@
                         <p id="service_type" class="bg-[#F2F2F2] px-4 py-[6px] text-gray-600 inline-block rounded-full">
                             Police</p>
                         <div class="flex items-center gap-2 mt-4">
-                            <button id="copy_btn"
-                                class="border border-[#D4D6D5] cursor-pointer w-1/2 rounded-lg py-2 duration-300 hover:bg-gray-200"><i
-                                    class="fa-regular fa-copy mr-2"></i><span>Copy</span></button>
-                            <button id="call_btn"
-                                class="bg-[#00A63E] text-white py-2 rounded-lg border border-[#00A63E] cursor-pointer w-1/2 duration-300 hover:bg-green-700"><i
-                                    class="fa-solid fa-phone mr-2"></i>Call</button>
+                            <button 
+                                class="border border-[#D4D6D5] cursor-pointer w-1/2 rounded-lg py-2 duration-300 hover:bg-gray-200 copy_btn"><i
+                                    class="fa-regular fa-copy mr-2 pointer-events-none"></i>Copy</button>
+                            <button 
+                                class="bg-[#00A63E] text-white py-2 rounded-lg border border-[#00A63E] cursor-pointer w-1/2 duration-300 hover:bg-green-700 call_btn"><i
+                                    class="fa-solid fa-phone mr-2 pointer-events-none "></i>Call</button>
                         </div>
                     </div>
                     <!-- Service Item 3 -->
@@ -102,8 +104,8 @@
                             <div class="bg-[#FFE3E2] rounded-2xl w-15 h-15 flex justify-center items-center">
                                 <img class="w-8" src="./assets/fire-service.png" alt="Emergency">
                             </div>
-                            <button id="heart_btn" class="cursor-pointer"><i
-                                    class="fa-regular fa-heart text-2xl"></i></button>
+                            <button class="cursor-pointer heart_btn"><i
+                                    class="fa-regular fa-heart heart_btn text-2xl pointer-events-none"></i></button>
                         </div>
                         <h3 id="service_title" class="text-2xl font-bold">Fire Service Number</h3>
                         <p id="service_subtitle" class="text-gray-500">Fire Service</p>
@@ -111,12 +113,12 @@
                         <p id="service_type" class="bg-[#F2F2F2] px-4 py-[6px] text-gray-600 inline-block rounded-full">
                             Fire</p>
                         <div class="flex items-center gap-2 mt-4">
-                            <button id="copy_btn"
-                                class="border border-[#D4D6D5] cursor-pointer w-1/2 rounded-lg py-2 duration-300 hover:bg-gray-200"><i
-                                    class="fa-regular fa-copy mr-2"></i><span>Copy</span></button>
-                            <button id="call_btn"
-                                class="bg-[#00A63E] text-white py-2 rounded-lg border border-[#00A63E] cursor-pointer w-1/2 duration-300 hover:bg-green-700"><i
-                                    class="fa-solid fa-phone mr-2"></i>Call</button>
+                            <button 
+                                class="border border-[#D4D6D5] cursor-pointer w-1/2 rounded-lg py-2 duration-300 hover:bg-gray-200 copy_btn"><i
+                                    class="fa-regular fa-copy mr-2 pointer-events-none"></i>Copy</button>
+                            <button 
+                                class="bg-[#00A63E] text-white py-2 rounded-lg border border-[#00A63E] cursor-pointer w-1/2 duration-300 hover:bg-green-700 call_btn"><i
+                                    class="fa-solid fa-phone mr-2 pointer-events-none "></i>Call</button>
                         </div>
                     </div>
                     <!-- Service Item 4 -->
@@ -125,8 +127,8 @@
                             <div class="bg-[#FFE3E2] rounded-2xl w-15 h-15 flex justify-center items-center">
                                 <img class="w-8" src="./assets/ambulance.png" alt="Emergency">
                             </div>
-                            <button id="heart_btn" class="cursor-pointer"><i
-                                    class="fa-regular fa-heart text-2xl"></i></button>
+                            <button class="cursor-pointer heart_btn"><i
+                                    class="fa-regular fa-heart heart_btn text-2xl pointer-events-none"></i></button>
                         </div>
                         <h3 id="service_title" class="text-2xl font-bold">Ambulance Service</h3>
                         <p id="service_subtitle" class="text-gray-500">Ambulance</p>
@@ -134,12 +136,12 @@
                         <p id="service_type" class="bg-[#F2F2F2] px-4 py-[6px] text-gray-600 inline-block rounded-full">
                             Health</p>
                         <div class="flex items-center gap-2 mt-4">
-                            <button id="copy_btn"
-                                class="border border-[#D4D6D5] cursor-pointer w-1/2 rounded-lg py-2 duration-300 hover:bg-gray-200"><i
-                                    class="fa-regular fa-copy mr-2"></i><span>Copy</span></button>
-                            <button id="call_btn"
-                                class="bg-[#00A63E] text-white py-2 rounded-lg border border-[#00A63E] cursor-pointer w-1/2 duration-300 hover:bg-green-700"><i
-                                    class="fa-solid fa-phone mr-2"></i>Call</button>
+                            <button 
+                                class="border border-[#D4D6D5] cursor-pointer w-1/2 rounded-lg py-2 duration-300 hover:bg-gray-200 copy_btn"><i
+                                    class="fa-regular fa-copy mr-2 pointer-events-none"></i>Copy</button>
+                            <button 
+                                class="bg-[#00A63E] text-white py-2 rounded-lg border border-[#00A63E] cursor-pointer w-1/2 duration-300 hover:bg-green-700 call_btn"><i
+                                    class="fa-solid fa-phone mr-2 pointer-events-none "></i>Call</button>
                         </div>
                     </div>
                     <!-- Service Item 5 -->
@@ -148,8 +150,8 @@
                             <div class="bg-[#FFE3E2] rounded-2xl w-15 h-15 flex justify-center items-center">
                                 <img class="w-8" src="./assets/emergency.png" alt="Emergency">
                             </div>
-                            <button id="heart_btn" class="cursor-pointer"><i
-                                    class="fa-regular fa-heart text-2xl"></i></button>
+                            <button class="cursor-pointer heart_btn"><i
+                                    class="fa-regular fa-heart heart_btn text-2xl pointer-events-none"></i></button>
                         </div>
                         <h3 id="service_title" class="text-2xl font-bold">Women & Child Helpline</h3>
                         <p id="service_subtitle" class="text-gray-500">NWomen & Child Helpline</p>
@@ -157,12 +159,12 @@
                         <p id="service_type" class="bg-[#F2F2F2] px-4 py-[6px] text-gray-600 inline-block rounded-full">
                             Help</p>
                         <div class="flex items-center gap-2 mt-4">
-                            <button id="copy_btn"
-                                class="border border-[#D4D6D5] cursor-pointer w-1/2 rounded-lg py-2 duration-300 hover:bg-gray-200"><i
-                                    class="fa-regular fa-copy mr-2"></i><span>Copy</span></button>
-                            <button id="call_btn"
-                                class="bg-[#00A63E] text-white py-2 rounded-lg border border-[#00A63E] cursor-pointer w-1/2 duration-300 hover:bg-green-700"><i
-                                    class="fa-solid fa-phone mr-2"></i>Call</button>
+                            <button 
+                                class="border border-[#D4D6D5] cursor-pointer w-1/2 rounded-lg py-2 duration-300 hover:bg-gray-200 copy_btn"><i
+                                    class="fa-regular fa-copy mr-2 pointer-events-none"></i>Copy</button>
+                            <button 
+                                class="bg-[#00A63E] text-white py-2 rounded-lg border border-[#00A63E] cursor-pointer w-1/2 duration-300 hover:bg-green-700 call_btn"><i
+                                    class="fa-solid fa-phone mr-2 pointer-events-none "></i>Call</button>
                         </div>
                     </div>
                     <!-- Service Item 6 -->
@@ -171,8 +173,8 @@
                             <div class="bg-[#FFE3E2] rounded-2xl w-15 h-15 flex justify-center items-center">
                                 <img class="w-8" src="./assets/emergency.png" alt="Emergency">
                             </div>
-                            <button id="heart_btn" class="cursor-pointer"><i
-                                    class="fa-regular fa-heart text-2xl"></i></button>
+                            <button class="cursor-pointer heart_btn"><i
+                                    class="fa-regular fa-heart heart_btn text-2xl pointer-events-none"></i></button>
                         </div>
                         <h3 id="service_title" class="text-2xl font-bold">Anti-Corruption Helpline</h3>
                         <p id="service_subtitle" class="text-gray-500">Anti-Corruption</p>
@@ -180,12 +182,12 @@
                         <p id="service_type" class="bg-[#F2F2F2] px-4 py-[6px] text-gray-600 inline-block rounded-full">
                             Govt.</p>
                         <div class="flex items-center gap-2 mt-4">
-                            <button id="copy_btn"
-                                class="border border-[#D4D6D5] cursor-pointer w-1/2 rounded-lg py-2 duration-300 hover:bg-gray-200"><i
-                                    class="fa-regular fa-copy mr-2"></i><span>Copy</span></button>
-                            <button id="call_btn"
-                                class="bg-[#00A63E] text-white py-2 rounded-lg border border-[#00A63E] cursor-pointer w-1/2 duration-300 hover:bg-green-700"><i
-                                    class="fa-solid fa-phone mr-2"></i>Call</button>
+                            <button 
+                                class="border border-[#D4D6D5] cursor-pointer w-1/2 rounded-lg py-2 duration-300 hover:bg-gray-200 copy_btn"><i
+                                    class="fa-regular fa-copy mr-2 pointer-events-none"></i>Copy</button>
+                            <button 
+                                class="bg-[#00A63E] text-white py-2 rounded-lg border border-[#00A63E] cursor-pointer w-1/2 duration-300 hover:bg-green-700 call_btn"><i
+                                    class="fa-solid fa-phone mr-2 pointer-events-none "></i>Call</button>
                         </div>
                     </div>
                     <!-- Service Item 7 -->
@@ -194,8 +196,8 @@
                             <div class="bg-[#FFE3E2] rounded-2xl w-15 h-15 flex justify-center items-center">
                                 <img class="w-8" src="./assets/emergency.png" alt="Emergency">
                             </div>
-                            <button id="heart_btn" class="cursor-pointer"><i
-                                    class="fa-regular fa-heart text-2xl"></i></button>
+                            <button class="cursor-pointer heart_btn"><i
+                                    class="fa-regular fa-heart heart_btn text-2xl pointer-events-none"></i></button>
                         </div>
                         <h3 id="service_title" class="text-2xl font-bold">Electricity Helpline</h3>
                         <p id="service_subtitle" class="text-gray-500">Electricity Outage</p>
@@ -203,22 +205,22 @@
                         <p id="service_type" class="bg-[#F2F2F2] px-4 py-[6px] text-gray-600 inline-block rounded-full">
                             Electricity</p>
                         <div class="flex items-center gap-2 mt-4">
-                            <button id="copy_btn"
-                                class="border border-[#D4D6D5] cursor-pointer w-1/2 rounded-lg py-2 duration-300 hover:bg-gray-200"><i
-                                    class="fa-regular fa-copy mr-2"></i><span>Copy</span></button>
-                            <button id="call_btn"
-                                class="bg-[#00A63E] text-white py-2 rounded-lg border border-[#00A63E] cursor-pointer w-1/2 duration-300 hover:bg-green-700"><i
-                                    class="fa-solid fa-phone mr-2"></i>Call</button>
+                            <button 
+                                class="border border-[#D4D6D5] cursor-pointer w-1/2 rounded-lg py-2 duration-300 hover:bg-gray-200 copy_btn"><i
+                                    class="fa-regular fa-copy mr-2 pointer-events-none"></i>Copy</button>
+                            <button 
+                                class="bg-[#00A63E] text-white py-2 rounded-lg border border-[#00A63E] cursor-pointer w-1/2 duration-300 hover:bg-green-700 call_btn"><i
+                                    class="fa-solid fa-phone mr-2 pointer-events-none "></i>Call</button>
                         </div>
                     </div>
                     <!-- Service Item 8 -->
                     <div class="service_item p-8 bg-white rounded-xl shadow-md shadow-gray-300">
                         <div class="flex justify-between items-center mb-4">
                             <div class="bg-[#FFE3E2] rounded-2xl w-15 h-15 flex justify-center items-center">
-                                <img class="w-8" src="./assets/emergency.png" alt="Emergency">
+                                <img class="w-8" src="./assets/brac.png" alt="Emergency">
                             </div>
-                            <button id="heart_btn" class="cursor-pointer"><i
-                                    class="fa-regular fa-heart text-2xl"></i></button>
+                            <button class="cursor-pointer heart_btn"><i
+                                    class="fa-regular fa-heart heart_btn text-2xl pointer-events-none"></i></button>
                         </div>
                         <h3 id="service_title" class="text-2xl font-bold">Brac Helpline</h3>
                         <p id="service_subtitle" class="text-gray-500">Brac</p>
@@ -226,22 +228,22 @@
                         <p id="service_type" class="bg-[#F2F2F2] px-4 py-[6px] text-gray-600 inline-block rounded-full">
                             NGO</p>
                         <div class="flex items-center gap-2 mt-4">
-                            <button id="copy_btn"
-                                class="border border-[#D4D6D5] cursor-pointer w-1/2 rounded-lg py-2 duration-300 hover:bg-gray-200"><i
-                                    class="fa-regular fa-copy mr-2"></i><span>Copy</span></button>
-                            <button id="call_btn"
-                                class="bg-[#00A63E] text-white py-2 rounded-lg border border-[#00A63E] cursor-pointer w-1/2 duration-300 hover:bg-green-700"><i
-                                    class="fa-solid fa-phone mr-2"></i>Call</button>
+                            <button 
+                                class="border border-[#D4D6D5] cursor-pointer w-1/2 rounded-lg py-2 duration-300 hover:bg-gray-200 copy_btn"><i
+                                    class="fa-regular fa-copy mr-2 pointer-events-none"></i>Copy</button>
+                            <button 
+                                class="bg-[#00A63E] text-white py-2 rounded-lg border border-[#00A63E] cursor-pointer w-1/2 duration-300 hover:bg-green-700 call_btn"><i
+                                    class="fa-solid fa-phone mr-2 pointer-events-none "></i>Call</button>
                         </div>
                     </div>
                     <!-- Service Item 9 -->
                     <div class="service_item p-8 bg-white rounded-xl shadow-md shadow-gray-300">
                         <div class="flex justify-between items-center mb-4">
                             <div class="bg-[#FFE3E2] rounded-2xl w-15 h-15 flex justify-center items-center">
-                                <img class="w-8" src="./assets/emergency.png" alt="Emergency">
+                                <img class="w-8" src="./assets/Bangladesh-Railway.png" alt="Emergency">
                             </div>
-                            <button id="heart_btn" class="cursor-pointer"><i
-                                    class="fa-regular fa-heart text-2xl"></i></button>
+                            <button class="cursor-pointer heart_btn"><i
+                                    class="fa-regular fa-heart heart_btn text-2xl pointer-events-none"></i></button>
                         </div>
                         <h3 id="service_title" class="text-2xl font-bold">Bangladesh Railway Helpline </h3>
                         <p id="service_subtitle" class="text-gray-500">Bangladesh Railway</p>
@@ -249,12 +251,12 @@
                         <p id="service_type" class="bg-[#F2F2F2] px-4 py-[6px] text-gray-600 inline-block rounded-full">
                             Travel</p>
                         <div class="flex items-center gap-2 mt-4">
-                            <button id="copy_btn"
-                                class="border border-[#D4D6D5] cursor-pointer w-1/2 rounded-lg py-2 duration-300 hover:bg-gray-200"><i
-                                    class="fa-regular fa-copy mr-2"></i><span>Copy</span></button>
-                            <button id="call_btn"
-                                class="bg-[#00A63E] text-white py-2 rounded-lg border border-[#00A63E] cursor-pointer w-1/2 duration-300 hover:bg-green-700"><i
-                                    class="fa-solid fa-phone mr-2"></i>Call</button>
+                            <button 
+                                class="border border-[#D4D6D5] cursor-pointer w-1/2 rounded-lg py-2 duration-300 hover:bg-gray-200 copy_btn"><i
+                                    class="fa-regular fa-copy mr-2 pointer-events-none"></i>Copy</button>
+                            <button 
+                                class="bg-[#00A63E] text-white py-2 rounded-lg border border-[#00A63E] cursor-pointer w-1/2 duration-300 hover:bg-green-700 call_btn"><i
+                                    class="fa-solid fa-phone mr-2 pointer-events-none "></i>Call</button>
                         </div>
                     </div>
                 </div>
@@ -273,17 +275,7 @@
                     </div>
                     <div id="history_container" class="mt-4 space-y-2">
                         <!--  -->
-                        <div class="p-4 bg-[#FAFAFA] ">
-                            <div class="flex justify-between items-center">
-                                <div class="">
-                                    <h4 class="text-lg font-semibold">Fire Service Number</h4>
-                                    <p class="text-gray-500">999</p>
-                                </div>
-                                <div class="">
-                                    <p class="">11:36:58 AM</p>
-                                </div>
-                            </div>
-                        </div>
+                        
                         <!--  -->
                     </div>
                 </div>
